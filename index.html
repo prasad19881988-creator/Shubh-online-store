@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shubh Online Store</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background: #232f3e; color: white; padding: 15px; text-align: center; }
-        nav { background: #37475a; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        .hero { background: #febd69; padding: 40px; text-align: center; color: #333; }
-        .container { padding: 20px; display: flex; flex-wrap: wrap; justify-content: space-around; }
-        .category-box { background: white; width: 300px; margin: 15px; padding: 20px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .category-box h3 { color: #232f3e; }
-        .btn { background: #ff9900; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 10px; }
-        footer { background: #232f3e; color: white; text-align: center; padding: 20px; margin-top: 20px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
+        header { background: #232f3e; color: white; padding: 20px; text-align: center; }
+        .hero { background: #febd69; padding: 30px; text-align: center; color: #111; }
+        .container { padding: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .product-card { background: white; width: 300px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden; text-align: center; padding-bottom: 15px; }
+        .product-card img { width: 100%; height: 200px; object-fit: cover; background: #eee; }
+        .product-card h3 { margin: 15px 0 5px; color: #333; }
+        .price { color: #B12704; font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; }
+        .whatsapp-btn { background: #25D366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; display: inline-block; font-weight: bold; }
+        footer { background: #232f3e; color: white; text-align: center; padding: 15px; margin-top: 30px; }
     </style>
 </head>
 <body>
@@ -23,41 +23,36 @@
     <h1>Shubh Online Store</h1>
 </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Clothing</a>
-    <a href="#">Jewelry</a>
-    <a href="#">Electronics</a>
-    <a href="#">Contact</a>
-</nav>
-
 <div class="hero">
-    <h2>Best Quality Products, Sahi Daam Par!</h2>
-    <p>Handmade Jewelry se lekar Latest Mobile Accessories tak—Sab kuch ek hi jagah.</p>
+    <h2>Special Deals on Jewelry & Electronics</h2>
+    <p>Direct Order karne ke liye WhatsApp button dabayein.</p>
 </div>
 
 <div class="container">
-    <div class="category-box">
-        <h3>Latest Clothing</h3>
-        <p>Trending Kapde aur Fashion Wear.</p>
-        <a href="#" class="btn">Abhi Dekhein</a>
+    <div class="product-card">
+        <img src="jewelry.jpg" alt="Homemade Jewelry">
+        <h3>Handmade Necklace</h3>
+        <p class="price">₹499/-</p>
+        <a href="https://wa.me/917360025302?text=Mujhe Jewelry chahiye" class="whatsapp-btn">WhatsApp Order</a>
     </div>
 
-    <div class="category-box">
-        <h3>Homemade Jewelry</h3>
-        <p>Unique aur Sundar Handmade designs.</p>
-        <a href="#" class="btn">Special Offer</a>
+    <div class="product-card">
+        <img src="earbuds.jpg" alt="Earbuds">
+        <h3>Wireless Earbuds</h3>
+        <p class="price">₹999/-</p>
+        <a href="https://wa.me/91YOURNUMBER?text=Mujhe Earbuds chahiye" class="whatsapp-btn">WhatsApp Order</a>
     </div>
 
-    <div class="category-box">
-        <h3>Electronics & Mobile Gear</h3>
-        <p>Earbuds, Chargers, Headphones aur Data Cables.</p>
-        <a href="#" class="btn">Shop Now</a>
+    <div class="product-card">
+        <img src="charger.jpg" alt="Fast Charger">
+        <h3>33W Fast Charger</h3>
+        <p class="price">₹599/-</p>
+        <a href="https://wa.me/91YOURNUMBER?text=Mujhe Charger chahiye" class="whatsapp-btn">WhatsApp Order</a>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 Shubh Online Store | All Rights Reserved</p>
+    <p>&copy; 2026 Shubh Online Store | Managed by Munna Kumar</p>
 </footer>
 
 </body>
