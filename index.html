@@ -3,62 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubh Online Store | Premium Store</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Shubh Luxury Store | Sachchidanand</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #c5a059; --dark: #121212; --light: #f9f9f9; }
-        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--light); color: var(--dark); }
+        :root { --gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); --dark: #0f0f0f; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: #000; color: #fff; overflow-x: hidden; }
         
-        /* Premium Header */
-        header { background: var(--dark); padding: 20px; text-align: center; border-bottom: 3px solid var(--gold); }
-        .logo { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: bold; margin: 0; }
+        /* Premium Header with Animation */
+        header { background: var(--dark); padding: 40px 20px; text-align: center; border-bottom: 2px solid #bf953f; }
+        .logo { font-family: 'Cinzel', serif; font-size: 3rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; letter-spacing: 5px; }
         
-        /* Navigation Menu */
-        nav { background: #1a1a1a; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
-        nav a:hover { color: var(--gold); }
+        /* Interactive Nav */
+        nav { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: #fcf6ba; text-decoration: none; margin: 0 15px; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; transition: 0.5s; }
+        nav a:hover { text-shadow: 0 0 10px #fcf6ba; }
 
-        /* Main Banner */
-        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1470&auto=format&fit=crop'); 
-                height: 350px; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; }
-        .hero h2 { font-family: 'Playfair Display'; font-size: 2.5rem; color: var(--gold); margin-bottom: 10px; }
+        /* Luxury Banner */
+        .hero { height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: radial-gradient(circle, #2c3e50 0%, #000 100%); }
+        .hero h2 { font-family: 'Cinzel'; font-size: 2rem; margin-bottom: 10px; color: #fff; }
+        .hero p { color: #bf953f; font-style: italic; letter-spacing: 1px; }
 
-        .container { padding: 40px 20px; text-align: center; max-width: 1200px; margin: auto; }
-        .section-title { font-family: 'Playfair Display'; font-size: 2rem; border-bottom: 2px solid var(--gold); display: inline-block; margin-bottom: 30px; }
+        /* Grid for Products */
+        .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 40px 20px; }
+        
+        /* Glass Card Effect */
+        .card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; overflow: hidden; transition: 0.6s; position: relative; }
+        .card:hover { transform: scale(1.05); background: rgba(255, 255, 255, 0.08); border: 1px solid #bf953f; }
+        .card img { width: 100%; height: 300px; object-fit: cover; filter: grayscale(30%); transition: 0.5s; }
+        .card:hover img { filter: grayscale(0%); }
+        
+        .info { padding: 25px; text-align: center; }
+        .price { font-size: 1.6rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
+        
+        /* WhatsApp Button */
+        .btn-wa { margin-top: 20px; padding: 12px 25px; border: 1px solid #bf953f; color: #bf953f; text-decoration: none; display: inline-block; transition: 0.4s; border-radius: 2px; text-transform: uppercase; font-size: 0.8rem; }
+        .btn-wa:hover { background: var(--gold); color: #000; font-weight: bold; }
 
-        .btn-main { background: var(--gold); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 20px; transition: 0.3s; }
-        .btn-main:hover { background: #b08d4a; }
-
-        footer { background: var(--dark); color: white; padding: 40px 20px; text-align: center; margin-top: 50px; }
+        footer { border-top: 1px solid #333; padding: 50px 20px; text-align: center; font-size: 0.8rem; letter-spacing: 2px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1 class="logo">SHUBH STORE</h1>
+    <h1 class="logo">SHUBH</h1>
 </header>
 
 <nav>
-    <a href="index.html">HOME</a>
-    <a href="jewelry.html">JEWELRY</a>
-    <a href="electronics.html">ELECTRONICS</a>
-    <a href="about.html">ABOUT US</a>
+    <a href="index.html">Home</a>
+    <a href="jewelry.html">Jewelry</a>
+    <a href="electronics.html">Tech</a>
 </nav>
 
 <div class="hero">
-    <h2>Welcome to Shubh Premium Store</h2>
-    <p>Sachchidanand ji ki taraf se shuddh aur sundar designs</p>
-    <a href="jewelry.html" class="btn-main">Browse Collection</a>
+    <h2>ELEGANCE IN EVERY PIECE</h2>
+    <p>Sachchidanand's Exclusive Collection</p>
 </div>
 
 <div class="container">
-    <h2 class="section-title">Hamari Visheshata</h2>
-    <p>Hum laate hain aapke liye hath se bani hui jewelry aur latest mobile accessories, sabse saste aur acche daam par.</p>
+    <div class="card">
+        <img src="j1.jpg" alt="Luxury Necklace">
+        <div class="info">
+            <h3>Handmade Royal Set</h3>
+            <div class="price">₹1,499</div>
+            <a href="https://wa.me/917360025302?text=Order: Royal Set" class="btn-wa">Order via WhatsApp</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="e1.jpg" alt="Premium Tech">
+        <div class="info">
+            <h3>Elite Buds Pro</h3>
+            <div class="price">₹1,999</div>
+            <a href="https://wa.me/917360025302?text=Order: Elite Buds" class="btn-wa">Order via WhatsApp</a>
+        </div>
+    </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 Shubh Online Store</p>
-    <p style="color: var(--gold);">Managed by Sachchidanand | Ph: 7360025302</p>
+    <p>SHUBH ONLINE STORE &copy; 2026</p>
+    <p style="color: #bf953f; margin-top: 10px;">Managed by Sachchidanand</p>
 </footer>
 
 </body>
