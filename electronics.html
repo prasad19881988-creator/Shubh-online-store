@@ -1,12 +1,45 @@
-<header><div class="logo">SHUBH ELECTRONIC ONLINE STORE</div></header>
-<script>
-    const eGrid = document.getElementById('e-grid'); // grid id change karein
-    const eDesc = [
-        "Extra bass aur noise cancellation ke saath premium buds.",
-        "Aapki health aur calls ka khayal rakhne wali smart watch.",
-        "Chhota size par dhamakedar aawaz wala mini speaker.",
-        "Heavy duty power bank jo safar mein saath nibhaye.",
-        "High quality wireless headphones music lovers ke liye."
-    ];
-    // Loop wahi rahega bas photo e${i}.jpg ho jayegi
-</script>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubh Electronic Online Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: #000; color: #fff; text-align: center; }
+        header { background: #0f0f0f; padding: 30px; border-bottom: 2px solid #bf953f; position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Cinzel'; font-size: 1.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 40px 5%; }
+        .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(191, 149, 63, 0.3); border-radius: 10px; overflow: hidden; padding-bottom: 25px; }
+        .card img { width: 100%; height: 280px; object-fit: contain; background: #111; padding: 10px; }
+        .info { padding: 15px; }
+        .desc { font-size: 0.8rem; color: #bbb; margin-bottom: 10px; min-height: 40px; }
+        .price { font-size: 1.5rem; color: #fcf6ba; font-weight: bold; margin-bottom: 15px; }
+        .wa-btn { border: 1px solid #25D366; color: #25D366; padding: 10px 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <header><div class="logo">SHUBH ELECTRONIC ONLINE STORE</div></header>
+    <div class="grid">
+        <div class="card">
+            <img src="e1.jpg">
+            <div class="info">
+                <h3>Bluetooth Earbuds Pro</h3>
+                <p class="desc">Dhamakedar Bass aur 24 ghante ka battery backup. Music ka asli maza.</p>
+                <p class="price">₹899</p>
+                <a href="https://wa.me/917360025302?text=Order: Shubh Electronic e1" class="wa-btn">WhatsApp Order</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="e2.jpg">
+            <div class="info">
+                <h3>Smart Digital Watch</h3>
+                <p class="desc">Aapki fitness ka pakka saathi. Heart rate aur calls sab ek jagah.</p>
+                <p class="price">₹1,299</p>
+                <a href="https://wa.me/917360025302?text=Order: Shubh Electronic e2" class="wa-btn">WhatsApp Order</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
