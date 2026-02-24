@@ -11,16 +11,15 @@
             --green: #25D366;
         }
         body { font-family: 'Poppins', sans-serif; margin: 0; background: #000; color: #fff; text-align: center; }
-        header { background: #0f0f0f; padding: 40px 20px; border-bottom: 2px solid #bf953f; }
-        .logo { font-family: 'Cinzel'; font-size: 2.2rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
+        header { background: #0f0f0f; padding: 30px 20px; border-bottom: 2px solid #bf953f; }
+        .logo { font-family: 'Cinzel'; font-size: 2.2rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; text-transform: uppercase; }
         .tagline { color: #fcf6ba; font-style: italic; font-size: 0.9rem; margin-top: 10px; }
         nav { background: #1a1a1a; padding: 15px; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #333; }
         nav a { color: #fcf6ba; text-decoration: none; margin: 0 8px; font-weight: bold; font-size: 0.7rem; text-transform: uppercase; }
-        .hero { padding: 50px 20px; background: radial-gradient(circle, #1a1a1a, #000); }
-        .btn-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 800px; margin: 30px auto; padding: 0 10px; }
-        .shop-btn { border: 1px solid #bf953f; color: #fcf6ba; padding: 20px 10px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(191,149,63,0.05); }
+        .hero { padding: 40px 20px; background: radial-gradient(circle, #1a1a1a, #000); }
+        .btn-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; max-width: 800px; margin: 30px auto; padding: 0 10px; }
+        .shop-btn { border: 1px solid #bf953f; color: #fcf6ba; padding: 20px 10px; text-decoration: none; font-weight: bold; border-radius: 8px; transition: 0.3s; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center; background: rgba(191,149,63,0.05); }
         .shop-btn:hover { background: var(--gold); color: #000; transform: translateY(-5px); }
-        /* Green Box for Travels */
         .travel-btn { border-color: var(--green); color: var(--green); background: rgba(37, 211, 102, 0.05); }
         .travel-btn:hover { background: var(--green); color: #000; }
         .address-box { margin-top: 40px; padding: 20px; border-top: 1px solid #222; color: #888; font-size: 0.85rem; }
@@ -28,6 +27,7 @@
 </head>
 <body>
     <header>
+        <img src="logo.png" alt="Shubh Online Store Logo" style="height: 150px; margin-bottom: 10px; border-radius: 50%;">
         <div class="logo">SHUBH ONLINE STORE</div>
         <div class="tagline">Aapka vishwas hamari pehchan, aapki khushi hamara samman.</div>
     </header>
@@ -42,28 +42,20 @@
 
     <div class="hero">
         <h1 style="font-size: 2.2rem; margin-bottom: 10px;">Swagat Hai!</h1>
-        <p style="color: var(--green); font-weight: 500;">India's Premium Online Shopping & Travel Destination</p>
+        <p style="color: var(--green); font-weight: 500;">India's Best Premium Online Shopping & Travel Destination</p>
         
         <div class="btn-container">
-            <a href="jewelry.html" class="shop-btn">
-                <span style="font-size: 1.5rem;">💍</span><br>JEWELRY STORE
-            </a>
-            <a href="electronics.html" class="shop-btn">
-                <span style="font-size: 1.5rem;">🎧</span><br>ELECTRONICS
-            </a>
-            <a href="accessories.html" class="shop-btn">
-                <span style="font-size: 1.5rem;">🔌</span><br>MOBILE ACC.
-            </a>
-            <a href="travels.html" class="shop-btn travel-btn">
-                <span style="font-size: 1.5rem;">🚕</span><br>TOURS & TRAVELS
-            </a>
+            <a href="jewelry.html" class="shop-btn">💍<br>JEWELRY STORE</a>
+            <a href="electronics.html" class="shop-btn">🎧<br>ELECTRONICS</a>
+            <a href="accessories.html" class="shop-btn">🔌<br>MOBILE ACC.</a>
+            <a href="travels.html" class="shop-btn travel-btn">🚕<br>TOURS & TRAVELS</a>
         </div>
     </div>
 
     <div class="address-box">
         <p><strong>📍 Hamara Pata:</strong></p>
         <p>Dharampur, Laxmisagar, Darbhanga, Bihar - 846009</p>
-        <p style="font-size: 0.7rem; margin-top: 20px;">&copy; 2026 Managed by Sachchidanand</p>
+        <p style="font-size: 0.75rem; margin-top: 20px;">&copy; 2026 Managed by Sachchidanand</p>
     </div>
 </body>
 </html>
