@@ -8,46 +8,67 @@
     <style>
         :root { --gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); }
         body { font-family: 'Poppins', sans-serif; margin: 0; background: #000; color: #fff; text-align: center; }
-        header { background: #0f0f0f; padding: 40px 20px; border-bottom: 2px solid #bf953f; }
-        .logo { font-family: 'Cinzel'; font-size: 2.5rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
-        .tagline { color: #fcf6ba; font-style: italic; font-size: 1rem; margin-top: 10px; }
-        nav { background: #1a1a1a; padding: 15px; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #333; }
-        nav a { color: #fcf6ba; text-decoration: none; margin: 0 12px; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
-        .hero { padding: 80px 20px; background: radial-gradient(circle, #1a1a1a, #000); }
-        .address-box { margin-top: 30px; padding: 20px; border: 1px dashed #bf953f; display: inline-block; font-size: 0.9rem; color: #bbb; }
-        .shop-btn { border: 1px solid #bf953f; color: #bf953f; padding: 12px 30px; text-decoration: none; display: inline-block; margin: 10px; font-weight: bold; }
+        header { background: #0f0f0f; padding: 30px; border-bottom: 2px solid #bf953f; position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Cinzel'; font-size: 1.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
+        .tagline { color: #fcf6ba; font-style: italic; font-size: 0.85rem; margin-top: 5px; }
+        .container { padding: 40px 5%; max-width: 900px; margin: auto; }
+        .travel-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(191,149,63,0.3); border-radius: 15px; margin-bottom: 40px; overflow: hidden; text-align: left; transition: 0.4s; }
+        .travel-card:hover { border-color: #bf953f; transform: scale(1.02); }
+        .travel-card img { width: 100%; height: 250px; object-fit: cover; border-bottom: 1px solid #bf953f; }
+        .card-content { padding: 25px; }
+        .service-title { font-family: 'Cinzel'; font-size: 1.6rem; color: #fcf6ba; margin-bottom: 10px; }
+        .details { color: #ccc; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+        .wa-btn { background: #25D366; color: #000; padding: 12px 25px; text-decoration: none; font-weight: bold; text-transform: uppercase; border-radius: 5px; display: inline-block; }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">SHUBH ONLINE STORE</div>
+        <div class="logo">SHUBH TOUR AND TRAVELS</div>
         <div class="tagline">Aapka vishwas hamari pehchan, aapki khushi hamara samman.</div>
     </header>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="jewelry.html">Jewelry</a>
-        <a href="electronics.html">Electronics</a>
-        <a href="accessories.html">Accessories</a>
-        <a href="travels.html" style="color:#25D366;">Tours & Travels</a>
-    </nav>
 
-    <div class="hero">
-        <h1>Welcome to Shubh Store</h1>
-        <p>Jewelry, Electronics, Mobile Accessories and Tour & Travels</p>
-        <a href="jewelry.html" class="shop-btn">View Store</a>
-        <a href="travels.html" class="shop-btn" style="border-color:#25D366; color:#25D366;">Book Travels</a>
-        
-        <br><br>
-        <div class="address-box">
-            <strong>📍 Hamara Pata:</strong><br>
-            Dharampur, Laxmisagar, Darbhanga, Bihar - 846009
+    <div class="container">
+        <div class="travel-card">
+            <img src="t1.jpg" alt="Train Booking">
+            <div class="card-content">
+                <div class="service-title">🚂 Train Ticket Booking</div>
+                <p class="details">IRCTC authorized ticket booking. Tatkal aur General tickets ki suvidha ke saath confirm seat paane mein poori sahayata.</p>
+                <a href="https://wa.me/917360025302?text=Enquiry: Train Ticket Booking" class="wa-btn">WhatsApp Booking</a>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <img src="t2.jpg" alt="Flight Booking">
+            <div class="card-content">
+                <div class="service-title">✈ Flight Ticket Booking</div>
+                <p class="details">Domestic aur International flights ke liye sabse sasti ticket. Sabhi badi airlines par bhari choot aur instant E-ticket.</p>
+                <a href="https://wa.me/917360025302?text=Enquiry: Flight Ticket Booking" class="wa-btn">WhatsApp Booking</a>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <img src="t3.jpg" alt="Car Booking">
+            <div class="card-content">
+                <div class="service-title">🚗 Four Wheeler / Taxi Booking</div>
+                <p class="details">Local aur Outstation safar ke liye Sedan, SUV aur Luxury gaadiyan anubhavi drivers ke saath उपलब्ध hain.</p>
+                <a href="https://wa.me/917360025302?text=Enquiry: Car Booking" class="wa-btn">Book Your Car</a>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <img src="t4.jpg" alt="Bus Booking">
+            <div class="card-content">
+                <div class="service-title">🚌 Bus Ticket Booking</div>
+                <p class="details">AC, Non-AC, aur Premium Volvo Sleeper bus ki booking poore Bharat ke liye sabse kam daam mein.</p>
+                <a href="https://wa.me/917360025302?text=Enquiry: Bus Ticket Booking" class="wa-btn">WhatsApp Booking</a>
+            </div>
         </div>
     </div>
 
-    <footer style="padding: 40px; color: #555; font-size: 0.8rem; border-top: 1px solid #222;">
-        <p>&copy; 2026 SHUBH ONLINE STORE | Managed by Sachchidanand</p>
-        <p>Address: Dharampur, Laxmisagar, Darbhanga, Bihar - 846009</p>
+    <footer style="padding: 40px; color: #666; font-size: 0.8rem; border-top: 1px solid #222;">
+        <p><strong>SHUBH TOUR AND TRAVELS</strong></p>
+        <p>Dharampur, Laxmisagar, Darbhanga, Bihar - 846009</p>
+        <p>&copy; 2026 Managed by Sachchidanand</p>
     </footer>
 </body>
 </html>
