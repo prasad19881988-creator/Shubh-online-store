@@ -3,53 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHUBH ONLINE STORE</title>
+    <title>SHUBH ELECTRONICS STORE</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <style>
         :root { --gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); }
         body { font-family: 'Poppins', sans-serif; margin: 0; background: #000; color: #fff; text-align: center; }
         header { background: #0f0f0f; padding: 30px; border-bottom: 2px solid #bf953f; position: sticky; top: 0; z-index: 100; }
         .logo { font-family: 'Cinzel'; font-size: 1.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
-        .tagline { color: #fcf6ba; font-style: italic; font-size: 0.85rem; margin-top: 5px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 40px 5%; }
-        .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(191,149,63,0.3); border-radius: 10px; overflow: hidden; padding-bottom: 25px; }
-        .card img { width: 100%; height: 280px; object-fit: contain; background: #111; padding: 10px; }
-        .price { font-size: 1.6rem; color: #fcf6ba; font-weight: bold; margin-bottom: 15px; }
-        .wa-btn { border: 1px solid #25D366; color: #25D366; padding: 10px 20px; text-decoration: none; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; border-radius: 4px; }
+        .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(191,149,63,0.3); border-radius: 10px; overflow: hidden; padding-bottom: 25px; transition: 0.5s; }
+        .card img { width: 100%; height: 280px; object-fit: cover; }
+        .info { padding: 15px; }
+        .price { font-size: 1.4rem; color: #fcf6ba; font-weight: bold; margin-bottom: 15px; }
+        .wa-btn { border: 1px solid #25D366; color: #25D366; padding: 10px 20px; text-decoration: none; font-size: 0.8rem; font-weight: bold; border-radius: 4px; }
     </style>
 </head>
 <body>
     <header>
-    <img src="logo.png" alt="Logo" style="height: 120px; margin-bottom: 10px; border-radius: 50%;">
+        <img src="logo.png" alt="Logo" style="height: 100px; margin-bottom: 10px; border-radius: 50%;">
+        <div class="logo">SHUBH ELECTRONICS STORE</div>
+    </header>
     
-    <div class="logo">SHUBH ONLINE STORE</div>
-    <div class="tagline">Aapka vishwas hamari pehchan, aapki khushi hamara samman.</div>
-</header>
     <div class="grid" id="electronics-grid">
         <script>
-            const eGrid = document.getElementById('electronics-grid');
+            const grid = document.getElementById('electronics-grid');
             const items = [
-                {n: "Wireless Earbuds Pro", d: "Crystal clear sound aur deep bass. 24 ghante tak ka battery backup."},
-                {n: "Smart Fitness Watch", d: "Health tracking, calls aur notifications ke saath premium stylish look."},
-                {n: "Portable Bluetooth Speaker", d: "Chhota packet bada dhamaka! Waterproof aur heavy sound quality."},
-                {n: "10000mAh Power Bank", d: "Fast charging aur slim design. Safar mein aapka sacha saathi."},
-                {n: "Noise Cancelling Headphones", d: "Studio quality sound aur noise isolation music lovers ke liye."}
+                {n: "Smart LED TV 32\"", d: "HD Ready Android TV with Smart Features."},
+                {n: "Single Door Refrigerator", d: "190L Capacity, 5-Star Energy Rating."},
+                {n: "Washing Machine 7kg", d: "Semi-Automatic with powerful wash motor."},
+                {n: "Split AC 1.5 Ton", d: "Inverter Cooling with Dust Filter."},
+                {n: "Microwave Oven 20L", d: "Ideal for reheating and basic cooking."},
+                {n: "Electric Kettle 1.5L", d: "Stainless steel body with auto-off."},
+                {n: "Dry Iron (Press)", d: "Non-stick coating for smooth ironing."},
+                {n: "Mixer Grinder 750W", d: "3 Stainless Steel Jars for heavy grinding."},
+                {n: "Induction Cooktop", d: "2000W with touch control panel."},
+                {n: "Juicer Mixer Grinder", d: "Powerful motor with separate juicer jar."},
+                {n: "Sandwich Maker", d: "Non-stick grill plates for easy breakfast."},
+                {n: "Pop-up Toaster", d: "2-Slice toaster with variable browning."},
+                {n: "Air Fryer 4.5L", d: "Oil-free healthy cooking technology."},
+                {n: "Room Heater Fan", d: "Compact heater for winter comfort."},
+                {n: "Personal Air Cooler", d: "Honeycomb pads for better cooling."},
+                {n: "Water Purifier RO", d: "7-Stage purification for safe water."},
+                {n: "Digital Kitchen Scale", d: "Precision weight for cooking recipes."},
+                {n: "Immersion Rod 1500W", d: "Quick water heating with safety handle."},
+                {n: "Hair Dryer 1200W", d: "Compact design with dual speed."},
+                {n: "Hair Straightener", d: "Ceramic plates for smooth styling."},
+                {n: "Electric Beard Trimmer", d: "Cordless with multiple length settings."},
+                {n: "Hand Blender", d: "Stainless steel blades for easy mixing."},
+                {n: "Coffee Maker", d: "Brew fresh coffee at home easily."},
+                {n: "Bluetooth Speaker 20W", d: "Deep bass sound with RGB lights."},
+                {n: "Home Theater 5.1", d: "Surround sound for movie experience."},
+                {n: "Soundbar for TV", d: "Cinematic audio with wireless subwoofer."},
+                {n: "CCTV WiFi Camera", d: "360 degree view with night vision."},
+                {n: "HD Projector", d: "Home cinema setup with HDMI support."},
+                {n: "Electric Sewing Machine", d: "Portable machine for home tailoring."},
+                {n: "Egg Boiler Machine", d: "Boils 7 eggs with auto-off timer."},
+                {n: "Digital Wall Clock", d: "LED display with date and temp."},
+                {n: "Rechargeable Torch", d: "High power beam for long distance."},
+                {n: "Voltage Stabilizer", d: "Protects TV & Fridge from power surges."},
+                {n: "UPS for Desktop PC", d: "Battery backup for power cuts."},
+                {n: "Laptop Cooling Pad", d: "Dual fan to prevent overheating."},
+                {n: "External Hard Drive 1TB", d: "Large storage for your data backup."},
+                {n: "RGB Gaming Keyboard", d: "Mechanical feel with backlit keys."},
+                {n: "Wireless Presenter", d: "Laser pointer for office meetings."},
+                {n: "Smart WiFi Plug", d: "Control appliances via mobile app."},
+                {n: "Mosquito Bat Swatter", d: "Rechargeable with safety net."},
+                {n: "Digital Thermometer", d: "Accurate body temp measurement."},
+                {n: "Nebulizer Machine", d: "Medical grade for respiratory relief."},
+                {n: "BP Monitor Digital", d: "Automatic blood pressure checker."},
+                {n: "Pulse Oximeter", d: "Measure oxygen & heart rate fast."},
+                {n: "Food Processor", d: "Multipurpose kitchen companion."},
+                {n: "Garment Steamer", d: "Vertical iron for premium clothes."},
+                {n: "Vacuum Cleaner", d: "Powerful suction for home cleaning."},
+                {n: "Electric Lunch Box", d: "Heats food automatically in office."},
+                {n: "Mini Fridge for Car", d: "Keep drinks cold while traveling."},
+                {n: "Bluetooth Earbuds TWS", d: "Compact design with noise cancellation."}
             ];
+
             for(let i=1; i<=50; i++) {
-                let itm = items[(i-1) % items.length];
-                eGrid.innerHTML += `
+                let itm = items[i-1];
+                grid.innerHTML += `
                 <div class="card">
-                    <img src="e${i}.jpg">
+                    <img src="e${i}.jpg" alt="${itm.n}">
                     <div class="info">
-                        <h3>${itm.n} #${i}</h3>
-                        <p style="font-size:0.85rem; color:#bbb; padding:10px; line-height:1.4;">${itm.d}</p>
-                        <p class="price">₹999</p>
-                        <a href="https://wa.me/917360025302?text=Order: Electronics e${i}" class="wa-btn">Order Now</a>
+                        <h3>${itm.n}</h3>
+                        <p style="color:#bbb; font-size:0.8rem;">${itm.d}</p>
+                        <p class="price">Enquire Price</p>
+                        <a href="https://wa.me/917360025302?text=Order: e${i} ${itm.n}" class="wa-btn">Buy on WhatsApp</a>
                     </div>
                 </div>`;
             }
         </script>
     </div>
-    <footer style="padding: 40px; color: #666; font-size: 0.8rem;">&copy; 2026 Shubh Online Store | Managed by Munna Kumar</footer>
 </body>
 </html>
