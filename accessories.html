@@ -13,6 +13,7 @@
         .tagline { color: #fcf6ba; font-style: italic; font-size: 0.85rem; margin-top: 5px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 40px 5%; }
         .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(191,149,63,0.3); border-radius: 10px; overflow: hidden; padding-bottom: 25px; transition: 0.5s; }
+        .card:hover { border-color: #bf953f; transform: translateY(-10px); }
         .card img { width: 100%; height: 280px; object-fit: contain; background: #111; padding: 10px; }
         .info { padding: 15px; }
         .desc { font-size: 0.85rem; color: #bbb; margin-bottom: 15px; min-height: 50px; line-height: 1.4; }
@@ -26,58 +27,34 @@
         <div class="tagline">Aapka vishwas hamari pehchan, aapki khushi hamara samman.</div>
     </header>
     
-    <div class="grid">
-        <div class="card">
-            <img src="m1.jpg">
-            <div class="info">
-                <h3>Super Fast 65W Charger</h3>
-                <p class="desc">Original quality adapter jo aapke phone ko turant charge kare. Surakshit aur mazboot design.</p>
-                <p class="price">₹599</p>
-                <a href="https://wa.me/917360025302?text=Order: Accessories m1" class="wa-btn">Order Now</a>
-            </div>
-        </div>
+    <div class="grid" id="accessories-grid">
+        <script>
+            const grid = document.getElementById('accessories-grid');
+            // Alag-alag products ki list
+            const items = [
+                {n: "Ultra Fast Charger", d: "65W super fast charging support ke saath. Aapke phone ke liye surakshit aur mazboot."},
+                {n: "Premium Silicon Case", d: "Soft touch finish aur shockproof safety. Phone ko girne se bachaye aur naya rakhe."},
+                {n: "9H Tempered Glass", d: "Crystal clear visibility aur scratch resistance screen safety ke liye sabse best."},
+                {n: "Braided Data Cable", d: "Tangle-free aur high-speed data transfer support. Long lasting aur heavy duty."},
+                {n: "Magnetic Car Mount", d: "Driving ke waqt phone ko safe rakhne ke liye mazboot magnetic grip stand."}
+            ];
 
-        <div class="card">
-            <img src="m2.jpg">
-            <div class="info">
-                <h3>Premium Silicon Back Case</h3>
-                <p class="desc">Soft finish wala silicon cover jo phone ko girne se bachaye aur premium look de.</p>
-                <p class="price">₹250</p>
-                <a href="https://wa.me/917360025302?text=Order: Accessories m2" class="wa-btn">Order Now</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="m3.jpg">
-            <div class="info">
-                <h3>9H Tempered Glass Safety</h3>
-                <p class="desc">Scratch-proof aur high protection glass jo aapki screen ko hamesha naya rakhe.</p>
-                <p class="price">₹149</p>
-                <a href="https://wa.me/917360025302?text=Order: Accessories m3" class="wa-btn">Order Now</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="m4.jpg">
-            <div class="info">
-                <h3>Fast Charging USB-C Cable</h3>
-                <p class="desc">Heavy duty braided cable jo fast data transfer aur charging ko support kare.</p>
-                <p class="price">₹199</p>
-                <a href="https://wa.me/917360025302?text=Order: Accessories m4" class="wa-btn">Order Now</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="m5.jpg">
-            <div class="info">
-                <h3>Foldable Mobile Stand</h3>
-                <p class="desc">Video dekhne ya online class ke liye best adjustable aur mazboot metal stand.</p>
-                <p class="price">₹299</p>
-                <a href="https://wa.me/917360025302?text=Order: Accessories m5" class="wa-btn">Order Now</a>
-            </div>
-        </div>
-
-        </div>
+            // Ye loop apne aap 50 items bana dega
+            for(let i=1; i<=50; i++) {
+                let item = items[(i-1) % items.length]; // Items repeat honge par numbering alag hogi
+                grid.innerHTML += `
+                <div class="card">
+                    <img src="m${i}.jpg">
+                    <div class="info">
+                        <h3>${item.n} #${i}</h3>
+                        <p class="desc">${item.d}</p>
+                        <p class="price">₹499</p>
+                        <a href="https://wa.me/917360025302?text=Order: Shubh Accessories m${i}" class="wa-btn">Order Now</a>
+                    </div>
+                </div>`;
+            }
+        </script>
+    </div>
     <footer style="padding: 40px; color: #666; font-size: 0.8rem;">&copy; 2026 Shubh Online Store | Managed by Munna Kumar</footer>
 </body>
 </html>
