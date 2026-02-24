@@ -10,53 +10,94 @@
         body { font-family: 'Poppins', sans-serif; margin: 0; background: #000; color: #fff; text-align: center; }
         header { background: #0f0f0f; padding: 30px; border-bottom: 2px solid #bf953f; position: sticky; top: 0; z-index: 100; }
         .logo { font-family: 'Cinzel'; font-size: 1.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
-        .tagline { color: #fcf6ba; font-style: italic; font-size: 0.85rem; margin-top: 5px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 40px 5%; }
         .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(191,149,63,0.3); border-radius: 10px; overflow: hidden; padding-bottom: 25px; transition: 0.5s; }
-        .card:hover { border-color: #bf953f; transform: translateY(-10px); }
-        .card img { width: 100%; height: 280px; object-fit: contain; background: #111; padding: 10px; }
+        .card img { width: 100%; height: 280px; object-fit: cover; }
         .info { padding: 15px; }
-        .desc { font-size: 0.85rem; color: #bbb; margin-bottom: 15px; min-height: 50px; line-height: 1.4; }
-        .price { font-size: 1.6rem; color: #fcf6ba; font-weight: bold; margin-bottom: 15px; }
-        .wa-btn { border: 1px solid #25D366; color: #25D366; padding: 10px 20px; text-decoration: none; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; border-radius: 4px; }
+        .price { font-size: 1.4rem; color: #fcf6ba; font-weight: bold; margin-bottom: 15px; }
+        .wa-btn { border: 1px solid #25D366; color: #25D366; padding: 10px 20px; text-decoration: none; font-size: 0.8rem; font-weight: bold; border-radius: 4px; }
     </style>
 </head>
 <body>
     <header>
-    <img src="logo.png" alt="Logo" style="height: 120px; margin-bottom: 10px; border-radius: 50%;">
-    
-    <div class="logo">SHUBH ONLINE STORE</div>
-    <div class="tagline">Aapka vishwas hamari pehchan, aapki khushi hamara samman.</div>
-</header>
+        <img src="logo.png" alt="Logo" style="height: 100px; margin-bottom: 10px; border-radius: 50%;">
+        <div class="logo">SHUBH MOBILE ACCESSORIES</div>
+    </header>
     
     <div class="grid" id="accessories-grid">
         <script>
             const grid = document.getElementById('accessories-grid');
-            // Alag-alag products ki list
             const items = [
-                {n: "Ultra Fast Charger", d: "65W super fast charging support ke saath. Aapke phone ke liye surakshit aur mazboot."},
-                {n: "Premium Silicon Case", d: "Soft touch finish aur shockproof safety. Phone ko girne se bachaye aur naya rakhe."},
-                {n: "9H Tempered Glass", d: "Crystal clear visibility aur scratch resistance screen safety ke liye sabse best."},
-                {n: "Braided Data Cable", d: "Tangle-free aur high-speed data transfer support. Long lasting aur heavy duty."},
-                {n: "Magnetic Car Mount", d: "Driving ke waqt phone ko safe rakhne ke liye mazboot magnetic grip stand."}
+                {n: "Fast Charging Adapter", d: "65W Super Fast charging support for all smartphones."},
+                {n: "Type-C Braided Cable", d: "High-speed data transfer and durable 2-meter long cable."},
+                {n: "Wireless Bluetooth Neckband", d: "24 hours battery backup with deep bass sound."},
+                {n: "Magnetic Car Mount", d: "Strong magnetic hold for car dashboard safety."},
+                {n: "20,000mAh Power Bank", d: "Dual USB output with fast charging indicator."},
+                {n: "Gaming Finger Sleeves", d: "Sweat-proof sleeves for smooth mobile gaming."},
+                {n: "OtG Adapter Type-C", d: "Connect Pendrive to your mobile easily."},
+                {n: "Bluetooth Earbuds TWS", d: "Noise-cancelling earbuds with touch control."},
+                {n: "Micro SD Card 64GB", d: "High-speed Class 10 memory card for storage."},
+                {n: "Mobile Screen Magnifier", d: "Watch movies on a bigger screen with this lens."},
+                {n: "Ring Light for Vlogging", d: "Professional lighting for TikTok and Reels."},
+                {n: "Smartphone Tripod Stand", d: "Adjustable height for stable photography."},
+                {n: "Waterproof Phone Pouch", d: "Protect your phone in rain or swimming pool."},
+                {n: "Selfie Stick with Remote", d: "Extendable stick with Bluetooth shutter button."},
+                {n: "Tempered Glass Protector", d: "9H Hardness edge-to-edge screen protection."},
+                {n: "Mobile Cooling Fan", d: "Prevents phone heating during heavy gaming."},
+                {n: "Privacy Screen Guard", d: "Prevents others from peeking into your phone."},
+                {n: "Stylus Touch Pen", d: "Smooth drawing and writing on any smartphone."},
+                {n: "Multi-port USB Hub", d: "Connect multiple devices to one port."},
+                {n: "Mobile Dust Plug Set", d: "Protects charging port from dust and water."},
+                {n: "Smartwatch Series 9", d: "Full touch screen with heart rate monitor."},
+                {n: "Wireless Charging Pad", d: "Qi-enabled fast wireless charging support."},
+                {n: "Aux Cable 3.5mm", d: "Connect mobile to car stereo or speakers."},
+                {n: "Camera Lens Protector", d: "Scratch-proof protection for mobile camera."},
+                {n: "Pop Socket Holder", d: "Better grip for holding large smartphones."},
+                {n: "Mobile Repair Tool Kit", d: "Complete set for minor mobile adjustments."},
+                {n: "Phone Leather Pouch", d: "Premium look with belt clip for safety."},
+                {n: "Anti-slip Dashboard Mat", d: "Keeps phone steady on car dashboard."},
+                {n: "External Mobile Mic", d: "Clear voice recording for interviews."},
+                {n: "VR Box Headset", d: "Experience 3D movies and games on mobile."},
+                {n: "Cable Protector Spirals", d: "Prevents charging cables from breaking."},
+                {n: "Fingerprint Scanner Case", d: "Special cover with easy scanner access."},
+                {n: "Magnetic Charging Cable", d: "Easy snap-on charging with magnet tips."},
+                {n: "Bluetooth Audio Receiver", d: "Turn old speakers into Bluetooth ones."},
+                {n: "Mini Mobile Gamepad", d: "Physical triggers for better gaming control."},
+                {n: "Phone UV Sterilizer", d: "Kills germs on your phone using UV light."},
+                {n: "Folding Desktop Stand", d: "Portable stand for office and home use."},
+                {n: "Sim Card Adapter Kit", d: "Convert Nano to Micro or Standard Sim."},
+                {n: "L-Shape Gaming Cable", d: "Comfortable charging while playing games."},
+                {n: "Car Charger Dual Port", d: "Fast charge two phones while driving."},
+                {n: "Neck Hanging Phone Holder", d: "Watch videos hands-free while lying down."},
+                {n: "Mobile Armband for Gym", d: "Secure your phone while running or gymming."},
+                {n: "Back Skin Sticker", d: "Customized skins to prevent scratches."},
+                {n: "Silicone Case Cover", d: "Soft and protective liquid silicone back cover."},
+                {n: "Bike Mobile Holder", d: "Metal body holder for cycles and bikes."},
+                {n: "Type-C to 3.5mm Jack", d: "Connect earphones to Type-C phones."},
+                {n: "Smart Tag Key Finder", d: "Never lose your keys or phone again."},
+                {n: "Rugged Armor Case", d: "Drop-tested military grade protection."},
+                {n: "Glowing LED Cable", d: "Charging cable that glows in the dark."},
+                {n: "Mini Bluetooth Speaker", d: "Pocket-sized loud sound with bass."}
             ];
 
-            // Ye loop apne aap 50 items bana dega
             for(let i=1; i<=50; i++) {
-                let item = items[(i-1) % items.length]; // Items repeat honge par numbering alag hogi
+                let itm = items[i-1];
                 grid.innerHTML += `
                 <div class="card">
-                    <img src="m${i}.jpg">
+                    <img src="m${i}.jpg" alt="${itm.n}">
                     <div class="info">
-                        <h3>${item.n} #${i}</h3>
-                        <p class="desc">${item.d}</p>
-                        <p class="price">₹499</p>
-                        <a href="https://wa.me/917360025302?text=Order: Shubh Accessories m${i}" class="wa-btn">Order Now</a>
+                        <h3>${itm.n}</h3>
+                        <p style="color:#bbb; font-size:0.85rem;">${itm.d}</p>
+                        <p class="price">₹199 - ₹1,499</p>
+                        <a href="https://wa.me/917360025302?text=Order: m${i} ${itm.n}" class="wa-btn">Buy on WhatsApp</a>
                     </div>
                 </div>`;
             }
         </script>
     </div>
-    <footer style="padding: 40px; color: #666; font-size: 0.8rem;">&copy; 2026 Shubh Online Store | Managed by Munna Kumar</footer>
+
+    <footer style="padding: 40px; color: #555; font-size: 0.8rem; border-top: 1px solid #222;">
+        Dharampur, Laxmisagar, Darbhanga, Bihar - 846009
+    </footer>
 </body>
 </html>
