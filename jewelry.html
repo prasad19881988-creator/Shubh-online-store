@@ -29,3 +29,39 @@
     
     <div class="grid" id="jewelry-grid">
         <script>
+            const grid = document.getElementById('jewelry-grid');
+            // Professional Designs ki list
+            const items = [
+                {n: "Royal Gold Choker", d: "Shuddh 22K gold finish wala choker set jo har dulhan ki pehli pasand hai. Isme meenakari ka barik kaam kiya gaya hai."},
+                {n: "Diamond Studded Earrings", d: "Premium American Diamond se bane party wear earrings jo aapko har mehfil mein alag chamak denge."},
+                {n: "Antique Temple Necklace", d: "South Indian Temple design necklace jo shuddh sunehre rang aur barik karigari ke saath aata hai."},
+                {n: "Bridal Kundan Set", d: "Bhari Kundan aur Moti ka kaam wala poora bridal set. Isme matching maang-tika aur jhumke shamil hain."},
+                {n: "Classic Gold Bangles", d: "Rozana pehenne ke liye mazboot aur sundar design wali chudiyan. Inka rang kabhi fika nahi padta."},
+                {n: "Ruby Floral Pendant", d: "Asli Ruby pathar aur floral design wala sunehra pendant set. Sadi aur suit dono par suit karega."},
+                {n: "Designer Silver Payal", d: "Shuddh chandi jaisa look dene wali designer payal jo pairo ki sundarta ko char chand laga degi."}
+            ];
+
+            // 50 products ka loop
+            for(let i=1; i<=50; i++) {
+                let itm = items[(i-1) % items.length];
+                grid.innerHTML += `
+                <div class="card">
+                    <img src="j${i}.jpg" alt="Design ${i}">
+                    <div class="info">
+                        <h3>${itm.n} #${i}</h3>
+                        <p class="desc">${itm.d}</p>
+                        <p class="price">₹1,499</p>
+                        <a href="https://wa.me/917360025302?text=Order: Shubh Jewelry j${i}" class="wa-btn">Order Now</a>
+                    </div>
+                </div>`;
+            }
+        </script>
+    </div>
+
+    <footer style="padding: 40px; color: #666; font-size: 0.8rem; border-top: 1px solid #222;">
+        <p><strong>SHUBH ONLINE STORE</strong></p>
+        <p>Dharampur, Laxmisagar, Darbhanga, Bihar - 846009</p>
+        <p>&copy; 2026 Managed by Sachchidanand</p>
+    </footer>
+</body>
+</html>
