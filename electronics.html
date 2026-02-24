@@ -3,46 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubh Electronic Online Store</title>
+    <title>SHUBH ONLINE STORE</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <style>
         :root { --gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); }
         body { font-family: 'Poppins', sans-serif; margin: 0; background: #000; color: #fff; text-align: center; }
         header { background: #0f0f0f; padding: 30px; border-bottom: 2px solid #bf953f; position: sticky; top: 0; z-index: 100; }
-        .logo { font-family: 'Cinzel'; font-size: 1.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; letter-spacing: 2px; }
+        .logo { font-family: 'Cinzel'; font-size: 1.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
+        .tagline { color: #fcf6ba; font-style: italic; font-size: 0.9rem; margin-top: 5px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 40px 5%; }
-        .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(191,149,63,0.3); border-radius: 10px; overflow: hidden; padding-bottom: 25px; transition: 0.5s; }
-        .card:hover { border-color: #bf953f; transform: translateY(-10px); }
+        .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(191,149,63,0.3); border-radius: 10px; overflow: hidden; padding-bottom: 25px; }
         .card img { width: 100%; height: 280px; object-fit: contain; background: #111; padding: 10px; }
-        .info { padding: 15px; }
-        .desc { font-size: 0.85rem; color: #bbb; margin-bottom: 15px; min-height: 45px; line-height: 1.4; }
         .price { font-size: 1.6rem; color: #fcf6ba; font-weight: bold; margin-bottom: 15px; }
-        .wa-btn { border: 1px solid #25D366; color: #25D366; padding: 10px 20px; text-decoration: none; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; border-radius: 4px; transition: 0.3s; }
-        .wa-btn:hover { background: #25D366; color: #000; }
+        .wa-btn { border: 1px solid #25D366; color: #25D366; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 4px; }
     </style>
 </head>
 <body>
-    <header><div class="logo">SHUBH ELECTRONIC ONLINE STORE</div></header>
+    <header>
+        <div class="logo">SHUBH ELECTRONIC ONLINE STORE</div>
+        <div class="tagline">Aapka vishwas hamari pehchan, aapki khushi hamara samman.</div>
+    </header>
     
-    <div class="grid">
-        <div class="card">
-            <img src="e1.jpg">
-            <div class="info">
-                <h3>Bluetooth Earbuds Pro</h3>
-                <p class="desc">High-quality sound aur extra bass ke saath. 20 ghante ka battery backup aur noise cancellation.</p>
-                <p class="price">₹899</p>
-                <a href="https://wa.me/917360025302?text=Order: Shubh Electronic e1" class="wa-btn">Order on WhatsApp</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="e2.jpg">
-            <div class="info">
-                <h3>Smart Digital Watch</h3>
-                <p class="desc">Aapki fitness ka pakka saathi. Heart rate monitor, sleep tracking aur call notifications ke saath.</p>
-                <p class="price">₹1,299</p>
-                <a href="https://wa.me/917360025302?text=Order: Shubh Electronic e2" class="wa-btn">Order on WhatsApp</a>
-            </div>
-        </div>
-
-        <div class="card">
+    <div class="grid" id="elec-grid">
+        <script>
+            const eGrid = document.getElementById('elec-grid');
+            for(let i=1; i<=50; i++) {
+                eGrid.innerHTML += `
+                <div class="card">
+                    <img src="e${i}.jpg">
+                    <div class="info">
+                        <h3>Electronic Gadget #${i}</h3>
+                        <p style="font-size:0.8rem; color:#bbb; padding:10px;">Premium quality product with best performance.</p>
+                        <p class="price">₹999</p>
+                        <a href="https://wa.me/917360025302?text=Order: Shubh Electronic e${i}" class="wa-btn">WhatsApp Order</a>
+                    </div>
+                </div>`;
+            }
+        </script>
+    </div>
+    <footer style="padding: 40px; color: #666; font-size: 0.8rem;">&copy; 2026 Shubh Online Store | Managed by Munna Kumar</footer>
+</body>
+</html>
