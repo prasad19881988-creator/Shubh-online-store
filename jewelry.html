@@ -3,46 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubh Jewelry Online Store</title>
+    <title>SHUBH ONLINE STORE</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <style>
         :root { --gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); }
         body { font-family: 'Poppins', sans-serif; margin: 0; background: #000; color: #fff; text-align: center; }
         header { background: #0f0f0f; padding: 30px; border-bottom: 2px solid #bf953f; position: sticky; top: 0; z-index: 100; }
-        .logo { font-family: 'Cinzel'; font-size: 2rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; }
+        .logo { font-family: 'Cinzel'; font-size: 1.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
+        .tagline { color: #fcf6ba; font-style: italic; font-size: 0.85rem; margin-top: 5px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 40px 5%; }
-        .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(191,149,63,0.2); border-radius: 10px; overflow: hidden; padding-bottom: 20px; transition: 0.5s; }
-        .card img { width: 100%; height: 280px; object-fit: cover; background: #1a1a1a; }
-        .price { font-size: 1.4rem; color: #fcf6ba; font-weight: bold; margin: 10px 0; }
-        .wa-btn { border: 1px solid #25D366; color: #25D366; padding: 8px 15px; text-decoration: none; font-size: 0.8rem; font-weight: bold; border-radius: 4px; }
+        .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(191,149,63,0.3); border-radius: 10px; overflow: hidden; padding-bottom: 25px; transition: 0.5s; }
+        .card:hover { border-color: #bf953f; transform: translateY(-10px); }
+        .card img { width: 100%; height: 300px; object-fit: cover; border-bottom: 1px solid rgba(191,149,63,0.1); }
+        .info { padding: 15px; }
+        .desc { font-size: 0.85rem; color: #bbb; margin-bottom: 15px; min-height: 50px; line-height: 1.4; }
+        .price { font-size: 1.6rem; color: #fcf6ba; font-weight: bold; margin-bottom: 15px; }
+        .wa-btn { border: 1px solid #25D366; color: #25D366; padding: 10px 20px; text-decoration: none; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; border-radius: 4px; }
     </style>
 </head>
 <body>
-    <header><div class="logo">SHUBH JEWELRY ONLINE STORE</div></header>
-    <div class="grid" id="j-grid">
+    <header>
+        <div class="logo">SHUBH JEWELRY ONLINE STORE</div>
+        <div class="tagline">Aapka vishwas hamari pehchan, aapki khushi hamara samman.</div>
+    </header>
+    
+    <div class="grid" id="jewelry-grid">
         <script>
-            const jGrid = document.getElementById('j-grid');
-            const descriptions = [
-                "Shuddh karigari se bana traditional necklace set.",
-                "Meenakari design wala sunehra bridal jhumka.",
-                "Hath se bani hui reshmi aur sunehri choodiyan.",
-                "Elegant pearl choker jo har dress pe suit kare.",
-                "Antique gold finish wala temple design set."
-            ];
-            for(let i=1; i<=50; i++) {
-                let d = descriptions[(i-1) % descriptions.length];
-                jGrid.innerHTML += `
-                <div class="card">
-                    <img src="j${i}.jpg">
-                    <div class="info">
-                        <h3>Jewelry Design #${i}</h3>
-                        <p style="font-size:0.8rem; color:#ccc; padding:0 10px;">${d}</p>
-                        <p class="price">₹799</p>
-                        <a href="https://wa.me/917360025302?text=Order: Shubh Jewelry j${i}" class="wa-btn">ORDER ON WHATSAPP</a>
-                    </div>
-                </div>`;
-            }
-        </script>
-    </div>
-</body>
-</html>
