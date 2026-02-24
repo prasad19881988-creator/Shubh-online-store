@@ -9,35 +9,40 @@
         :root { --gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); }
         body { font-family: 'Poppins', sans-serif; margin: 0; background: #000; color: #fff; text-align: center; }
         header { background: #0f0f0f; padding: 30px; border-bottom: 2px solid #bf953f; position: sticky; top: 0; z-index: 100; }
-        .logo { font-family: 'Cinzel'; font-size: 1.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
+        .logo { font-family: 'Cinzel'; font-size: 1.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; letter-spacing: 2px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 40px 5%; }
         .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(191,149,63,0.3); border-radius: 10px; overflow: hidden; padding-bottom: 25px; transition: 0.5s; }
+        .card:hover { border-color: #bf953f; transform: translateY(-10px); }
         .card img { width: 100%; height: 280px; object-fit: contain; background: #111; padding: 10px; }
         .info { padding: 15px; }
-        .desc { font-size: 0.8rem; color: #bbb; margin-bottom: 10px; min-height: 40px; }
-        .price { font-size: 1.5rem; color: #fcf6ba; font-weight: bold; margin-bottom: 15px; }
-        .wa-btn { border: 1px solid #25D366; color: #25D366; padding: 10px 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; border-radius: 4px; }
+        .desc { font-size: 0.85rem; color: #bbb; margin-bottom: 15px; min-height: 45px; line-height: 1.4; }
+        .price { font-size: 1.6rem; color: #fcf6ba; font-weight: bold; margin-bottom: 15px; }
+        .wa-btn { border: 1px solid #25D366; color: #25D366; padding: 10px 20px; text-decoration: none; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; border-radius: 4px; transition: 0.3s; }
+        .wa-btn:hover { background: #25D366; color: #000; }
     </style>
 </head>
 <body>
     <header><div class="logo">SHUBH ELECTRONIC ONLINE STORE</div></header>
+    
     <div class="grid">
         <div class="card">
-            <img src="e1.jpg"><div class="info"><h3>Bluetooth Earbuds Pro</h3><p class="desc">Zabardast bass aur long battery backup. Music ka asli anubhav.</p><p class="price">₹899</p><a href="https://wa.me/917360025302?text=Order: Shubh Electronic e1" class="wa-btn">WHATSAPP ORDER</a></div>
+            <img src="e1.jpg">
+            <div class="info">
+                <h3>Bluetooth Earbuds Pro</h3>
+                <p class="desc">High-quality sound aur extra bass ke saath. 20 ghante ka battery backup aur noise cancellation.</p>
+                <p class="price">₹899</p>
+                <a href="https://wa.me/917360025302?text=Order: Shubh Electronic e1" class="wa-btn">Order on WhatsApp</a>
+            </div>
         </div>
+
         <div class="card">
-            <img src="e2.jpg"><div class="info"><h3>Smart Fitness Watch</h3><p class="desc">Aapki health aur calls ka khayal rakhne wali modern watch.</p><p class="price">₹1,299</p><a href="https://wa.me/917360025302?text=Order: Shubh Electronic e2" class="wa-btn">WHATSAPP ORDER</a></div>
+            <img src="e2.jpg">
+            <div class="info">
+                <h3>Smart Digital Watch</h3>
+                <p class="desc">Aapki fitness ka pakka saathi. Heart rate monitor, sleep tracking aur call notifications ke saath.</p>
+                <p class="price">₹1,299</p>
+                <a href="https://wa.me/917360025302?text=Order: Shubh Electronic e2" class="wa-btn">Order on WhatsApp</a>
+            </div>
         </div>
+
         <div class="card">
-            <img src="e3.jpg"><div class="info"><h3>Wireless Mini Speaker</h3><p class="desc">Chhota size par dhamakedar aawaz. Party ke liye perfect.</p><p class="price">₹650</p><a href="https://wa.me/917360025302?text=Order: Shubh Electronic e3" class="wa-btn">WHATSAPP ORDER</a></div>
-        </div>
-        <div class="card">
-            <img src="e4.jpg"><div class="info"><h3>10000mAh Power Bank</h3><p class="desc">Fast charging support ke saath, aapke phone ka sacha saathi.</p><p class="price">₹999</p><a href="https://wa.me/917360025302?text=Order: Shubh Electronic e4" class="wa-btn">WHATSAPP ORDER</a></div>
-        </div>
-        <div class="card">
-            <img src="e5.jpg"><div class="info"><h3>High Speed Pendrive</h3><p class="desc">32GB storage jo data transfer kare bijli ki raftar se.</p><p class="price">₹450</p><a href="https://wa.me/917360025302?text=Order: Shubh Electronic e5" class="wa-btn">WHATSAPP ORDER</a></div>
-        </div>
-        </div>
-    <footer style="padding: 40px; color: #666; font-size: 0.8rem;">&copy; 2026 Shubh Online Store | Managed by Munna Kumar</footer>
-</body>
-</html>
