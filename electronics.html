@@ -10,12 +10,12 @@
         body { font-family: 'Poppins', sans-serif; margin: 0; background: #000; color: #fff; text-align: center; }
         header { background: #0f0f0f; padding: 30px; border-bottom: 2px solid #bf953f; position: sticky; top: 0; z-index: 100; }
         .logo { font-family: 'Cinzel'; font-size: 1.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
-        .tagline { color: #fcf6ba; font-style: italic; font-size: 0.9rem; margin-top: 5px; }
+        .tagline { color: #fcf6ba; font-style: italic; font-size: 0.85rem; margin-top: 5px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 40px 5%; }
         .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(191,149,63,0.3); border-radius: 10px; overflow: hidden; padding-bottom: 25px; }
         .card img { width: 100%; height: 280px; object-fit: contain; background: #111; padding: 10px; }
         .price { font-size: 1.6rem; color: #fcf6ba; font-weight: bold; margin-bottom: 15px; }
-        .wa-btn { border: 1px solid #25D366; color: #25D366; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 4px; }
+        .wa-btn { border: 1px solid #25D366; color: #25D366; padding: 10px 20px; text-decoration: none; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; border-radius: 4px; }
     </style>
 </head>
 <body>
@@ -23,19 +23,26 @@
         <div class="logo">SHUBH ELECTRONIC ONLINE STORE</div>
         <div class="tagline">Aapka vishwas hamari pehchan, aapki khushi hamara samman.</div>
     </header>
-    
-    <div class="grid" id="elec-grid">
+    <div class="grid" id="electronics-grid">
         <script>
-            const eGrid = document.getElementById('elec-grid');
+            const eGrid = document.getElementById('electronics-grid');
+            const items = [
+                {n: "Wireless Earbuds Pro", d: "Crystal clear sound aur deep bass. 24 ghante tak ka battery backup."},
+                {n: "Smart Fitness Watch", d: "Health tracking, calls aur notifications ke saath premium stylish look."},
+                {n: "Portable Bluetooth Speaker", d: "Chhota packet bada dhamaka! Waterproof aur heavy sound quality."},
+                {n: "10000mAh Power Bank", d: "Fast charging aur slim design. Safar mein aapka sacha saathi."},
+                {n: "Noise Cancelling Headphones", d: "Studio quality sound aur noise isolation music lovers ke liye."}
+            ];
             for(let i=1; i<=50; i++) {
+                let itm = items[(i-1) % items.length];
                 eGrid.innerHTML += `
                 <div class="card">
                     <img src="e${i}.jpg">
                     <div class="info">
-                        <h3>Electronic Gadget #${i}</h3>
-                        <p style="font-size:0.8rem; color:#bbb; padding:10px;">Premium quality product with best performance.</p>
+                        <h3>${itm.n} #${i}</h3>
+                        <p style="font-size:0.85rem; color:#bbb; padding:10px; line-height:1.4;">${itm.d}</p>
                         <p class="price">₹999</p>
-                        <a href="https://wa.me/917360025302?text=Order: Shubh Electronic e${i}" class="wa-btn">WhatsApp Order</a>
+                        <a href="https://wa.me/917360025302?text=Order: Electronics e${i}" class="wa-btn">Order Now</a>
                     </div>
                 </div>`;
             }
