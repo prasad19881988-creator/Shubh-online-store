@@ -6,7 +6,10 @@
     <title>SHUBH ONLINE STORE</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); }
+        :root { 
+            --gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); 
+            --green: #25D366;
+        }
         body { font-family: 'Poppins', sans-serif; margin: 0; background: #000; color: #fff; text-align: center; }
         header { background: #0f0f0f; padding: 40px 20px; border-bottom: 2px solid #bf953f; }
         .logo { font-family: 'Cinzel'; font-size: 2.2rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
@@ -15,11 +18,12 @@
         nav a { color: #fcf6ba; text-decoration: none; margin: 0 8px; font-weight: bold; font-size: 0.7rem; text-transform: uppercase; }
         .hero { padding: 50px 20px; background: radial-gradient(circle, #1a1a1a, #000); }
         .btn-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 800px; margin: 30px auto; padding: 0 10px; }
-        .shop-btn { border: 1px solid #bf953f; color: #bf953f; padding: 20px 10px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .shop-btn { border: 1px solid #bf953f; color: #fcf6ba; padding: 20px 10px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(191,149,63,0.05); }
         .shop-btn:hover { background: var(--gold); color: #000; transform: translateY(-5px); }
-        .travel-btn { border-color: #25D366; color: #25D366; }
-        .travel-btn:hover { background: #25D366; color: #000; }
-        .address-box { margin-top: 40px; padding: 20px; border-top: 1px solid #222; color: #777; font-size: 0.85rem; }
+        /* Green Box for Travels */
+        .travel-btn { border-color: var(--green); color: var(--green); background: rgba(37, 211, 102, 0.05); }
+        .travel-btn:hover { background: var(--green); color: #000; }
+        .address-box { margin-top: 40px; padding: 20px; border-top: 1px solid #222; color: #888; font-size: 0.85rem; }
     </style>
 </head>
 <body>
@@ -37,36 +41,29 @@
     </nav>
 
     <div class="hero">
-        <h1 style="font-size: 2rem;">Hamari Suvidhayein</h1>
-        <p style="color: #888; font-size: 0.9rem;">Niche diye gaye boxes par click karke hamare store par jayein</p>
+        <h1 style="font-size: 2.2rem; margin-bottom: 10px;">Swagat Hai!</h1>
+        <p style="color: var(--green); font-weight: 500;">India's Premium Online Shopping & Travel Destination</p>
         
         <div class="btn-container">
             <a href="jewelry.html" class="shop-btn">
-                <span style="font-size: 1.5rem;">💍</span><br>
-                JEWELRY STORE
+                <span style="font-size: 1.5rem;">💍</span><br>JEWELRY STORE
             </a>
-            
             <a href="electronics.html" class="shop-btn">
-                <span style="font-size: 1.5rem;">🎧</span><br>
-                ELECTRONICS
+                <span style="font-size: 1.5rem;">🎧</span><br>ELECTRONICS
             </a>
-
             <a href="accessories.html" class="shop-btn">
-                <span style="font-size: 1.5rem;">🔌</span><br>
-                MOBILE ACC.
+                <span style="font-size: 1.5rem;">🔌</span><br>MOBILE ACC.
             </a>
-
             <a href="travels.html" class="shop-btn travel-btn">
-                <span style="font-size: 1.5rem;">🚕</span><br>
-                TOURS & TRAVELS
+                <span style="font-size: 1.5rem;">🚕</span><br>TOURS & TRAVELS
             </a>
         </div>
     </div>
 
     <div class="address-box">
-        <p><strong>📍 Sachchidanand Enterprise</strong></p>
+        <p><strong>📍 Hamara Pata:</strong></p>
         <p>Dharampur, Laxmisagar, Darbhanga, Bihar - 846009</p>
-        <p style="font-size: 0.7rem; margin-top: 20px;">&copy; 2026 SHUBH ONLINE STORE | All Rights Reserved</p>
+        <p style="font-size: 0.7rem; margin-top: 20px;">&copy; 2026 Managed by Sachchidanand</p>
     </div>
 </body>
 </html>
