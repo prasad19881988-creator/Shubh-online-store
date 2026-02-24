@@ -3,32 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubh Online Store</title>
+    <title>SHUBH ONLINE STORE</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <style>
         :root { --gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); }
         body { font-family: 'Poppins', sans-serif; margin: 0; background: #000; color: #fff; text-align: center; }
         header { background: #0f0f0f; padding: 40px 20px; border-bottom: 2px solid #bf953f; }
-        .logo { font-family: 'Cinzel'; font-size: 2.5rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; letter-spacing: 2px; }
+        .logo { font-family: 'Cinzel'; font-size: 2.5rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
         nav { background: #1a1a1a; padding: 15px; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #333; }
         nav a { color: #fcf6ba; text-decoration: none; margin: 0 10px; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
-        .hero { padding: 80px 20px; background: radial-gradient(circle, #1a1a1a, #000); }
-        .btn { border: 1px solid #bf953f; color: #bf953f; padding: 12px 25px; text-decoration: none; display: inline-block; margin-top: 20px; }
+        .hero { padding: 100px 20px; background: radial-gradient(circle, #1a1a1a, #000); }
+        .shop-btn { border: 1px solid #bf953f; color: #bf953f; padding: 15px 35px; text-decoration: none; display: inline-block; margin-top: 20px; font-weight: bold; border-radius: 2px; transition: 0.3s; }
+        .shop-btn:hover { background: var(--gold); color: #000; }
     </style>
 </head>
 <body>
     <header><div class="logo">SHUBH ONLINE STORE</div></header>
+    
     <nav>
         <a href="index.html">Home</a>
         <a href="jewelry.html">Jewelry</a>
         <a href="electronics.html">Electronics</a>
         <a href="accessories.html">Accessories</a>
     </nav>
+
     <div class="hero">
-        <h1>Welcome to Shubh Online Store</h1>
-        <p>Aapka vishwas hamari pehchan, aapki khushi hamara samman.</p>
-        <a href="jewelry.html" class="btn">Shop Now</a>
+        <h1 style="font-size: 3rem; margin-bottom: 10px;">Swagat Hai!</h1>
+        <p style="color: #bf953f; font-style: italic;">Aapka apna bharosemand Shubh Online Store</p>
+        <br>
+        <a href="jewelry.html" class="shop-btn">SHOP NOW</a>
     </div>
-    <footer style="padding: 30px; color: #555;">&copy; 2026 Shubh Online Store | Managed by Munna Kumar</footer>
+
+    <footer style="padding: 50px; color: #555; font-size: 0.8rem; border-top: 1px solid #222;">
+        &copy; 2026 SHUBH ONLINE STORE | Managed by Munna Kumar
+    </footer>
 </body>
 </html>
